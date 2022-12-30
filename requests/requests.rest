@@ -1,0 +1,50 @@
+GET http://localhost:3003/api/blogs
+
+###
+
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZsb29wYXMiLCJpZCI6IjYzYWQ4MGM0YzRkZTRiY2ZhYTAxYmQyMyIsImlhdCI6MTY3MjMxNTI3NSwiZXhwIjoxNjcyMzE4ODc1fQ.S5uCsy-_sIEOc38Z0j5FSUaqUCSkQdqNFwhcxjnWXF0
+
+   {
+       "title": "spooks",
+       "author": "izie",
+       "url": "kooks.com",
+       "likes":1000,
+       "userId": "63ad71a98483a8451efb20ef"
+   }
+
+###
+
+
+PUT http://localhost:3003/api/blogs/639c67f2dacbdf86ee256f62
+Content-Type: application/json
+
+   {
+       "title": "spooks",
+       "author": "izie",
+       "url": "kooks.co.uk",
+       "likes":1000
+   }
+
+###
+POST http://localhost:3003/api/users/
+Content-Type: application/json
+
+{
+    "username": "floopas",
+    "name": "izie",
+    "password": "kook"
+}
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "floopas",
+    "password": "kook"
+}
+
+###
